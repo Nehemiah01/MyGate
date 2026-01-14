@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+      "lib": ["ES2021", "dom"],
+      "target": "ESNext",
+      "module": "ESNext",
+      "strict": true,
+      "importHelpers": true,
+      "moduleResolution": "bundler",
+      "esModuleInterop": true,
+      "verbatimModuleSyntax": true,
+      "allowSyntheticDefaultImports": true,
+      "sourceMap": true,
+      "resolveJsonModule": true,
+      "jsx": "preserve",
+      "jsxImportSource": "vue",
+      "isolatedModules": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "incremental": true,
+      "noImplicitThis": false,
+      "paths": {
+          "@/*": ["./src/*"]
+      },
+      "composite": true,
+      "types": ["vite/client"]
+  },
+  "include": ["**/*.ts", "./src/**/*.ts", "./src/**/*.d.ts", "*/*.vue", "./src/*.vue", "./src/**/*.vue"],
+  "exclude": ["node_modules"]
+}

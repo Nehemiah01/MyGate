@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+* {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+@layer base {
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body, html {
+  overflow-x: clip; /*Prevents whole page from scrolling sideways*/
+}
+
+/* Base Styles */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-cream);
+  color: var(--color-brand-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Texture Utility */
+.texture-overlay {
+  position: relative;
+}
+.texture-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* A subtle noise texture can be added here if desired */
+  /* background-image: url('/path/to/noise.png'); */
+  opacity: 0.05;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}

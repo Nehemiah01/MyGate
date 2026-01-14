@@ -1,0 +1,32 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "types": ["vite/client"],
+    
+    /* Vue / Browser settings */
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "allowJs": false,
+
+    /* App paths */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    
+    /* Build & type safety */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ]
+}
